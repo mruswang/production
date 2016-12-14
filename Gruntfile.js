@@ -1,0 +1,91 @@
+module.exports=function (grunt) {
+    grunt.initConfig({//配置
+        pkg:grunt.file.readJSON('package.json'),
+        csslint:{//检查style css语法
+            src:['public/stylesheets/*.css']
+        },
+        concat:{//合并css文件
+            css:{
+                src:['public/stylesheets/*.css'],
+                dest:'public/stylesheets/dist/<%= pkg.name %>.css'//根据目录下文件情况配置
+            }
+        },
+        cssmin:{ //压缩style css 文件 .min.css
+            options:{
+                keepSpecialComments:0//移除css文件中所有的注释
+            },
+            minify:{
+                expand:true,
+                cwd:'public/stylesheets/dist/',
+                src:['<%= pkg.name %>.css'],
+                dest:'public/stylesheets/dist',
+                ext:'.min.css'
+            }
+        },
+        //压缩图片
+        imagemin:{
+            dist:{
+                options:{optimizationLevel:3},
+                files:[{
+                    expand:true,
+                    cwd:'public/images/',
+                    //优化 img目录下所有的png/jpg/jpeg图片
+                    src:['**/*.{png,jpg,jpeg}'],
+                    //优化后的图片保存位置，默认覆盖
+                    dest:'public/images/'
+                }]
+            }
+        },
+        //检查javascript语法
+        jshint:{
+            all:['Gruntfile.js',
+                'public/javascripts/attr.js',
+                'public/javascripts/event.js',
+                'public/javascripts/getcss.js'
+            ]
+        },
+        //最小化、混淆、合并javascript文件
+        uglify:{
+            build:{
+                src:'public/javascripts/*.js',
+                dest:'public/build/javascripts/<%=pkg.name%>.min.js'
+            }
+        },
+        //监控
+        watch:{
+            css:{
+                files:'public/stylesheets/*.css',
+                tasks:['csslint'],
+                options:{
+                    //livereload:true,
+                    spawn:false,
+                }
+            },
+            scripts:{
+                files:'public/javascripts/*.js',
+                tasks:['jshint'],
+                options:{
+                    spawn:false,
+                },
+            }
+        },
+    });
+    //加载插件
+    ['grunt-contrib-csslint',
+        'grunt-contrib-concat',
+        'grunt-contrib-cssmin',
+        'grunt-contrib-imagemin',
+        'grunt-contrib-jshint',
+        'grunt-contrib-uglify',
+        'grunt-contrib-watch',
+    ].forEach(function (task) {
+        grunt.loadNpmTasks(task);
+    });
+    //默认任务(注册)
+    //默认任务用于后端
+    //grunt.registerTask('default',['jshint',]);
+    //静态任务用于前端静态资源
+    grunt.registerTask('static',['concat','cssmin','imagemin','uglify']);
+    //监控
+    grunt.registerTask('watch',['watch',])
+};

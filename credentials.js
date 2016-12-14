@@ -1,0 +1,15 @@
+module.exports={
+    cookieSecret:'把你的cookie秘钥放在这里',
+    QQMail:{
+        user:'875484737@qq.com',
+        password:'uxdpugjtpczmbfgg',
+    },
+    mongo:{
+        development:{
+            connectionString:'mongodb://root:12345abc@localhost:27017/admin',
+        },
+        production:{
+            connectionString:'mongodb://root:12345abc@localhost:27017/admin',
+        }
+    }
+}

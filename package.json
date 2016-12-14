@@ -1,0 +1,14 @@
+{
+  "name": "production",
+  "version": "1.0.0",
+  "description": "production",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "wang"
+  ],
+  "author": "wang",
+  "license": "MIT"
+}
