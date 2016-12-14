@@ -1,0 +1,15 @@
+<div ng-app="mainApp" class="user">
+    <nav class="nav navbar-default col-xs-2" >
+        <ul class="nav navbar-default">
+            <li><a href="/user#/users/signup">注册</a></li>
+            <li><a href="/user#/users/login">登录</a></li>
+            <li><a href="/user#/users/detail">个人信息</a></li>
+            <li><a href="/user#/users/edit">编辑</a></li>
+            <li><a href="/user#/users/userlist">用户列表</a></li>
+            <li><a href="/user#/users/forgotpwd">忘记密码</a></li>
+        </ul>
+    </nav>
+    <section class="col-xs-10">
+        <div class="page \{{ pageclass }}" ng-view></div>
+    </section>
+</div>

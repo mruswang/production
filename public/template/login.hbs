@@ -1,0 +1,37 @@
+<div class="" ng-controller="loginController as ctrl">
+    <h1>User login Page</h1>
+    <p>{{ctrl.message}}</p>
+    <form class="form-horizontal" name="loginForm" ng-submit="ctrl.login()">
+        <p>请登录</p>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">账号</label>
+            <div class="col-sm-9">
+                <input type="text"
+                       class="form-control"
+                       placeholder="请输入用户名"
+                       ng-model="ctrl.user.username"
+                       required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">密码</label>
+            <div class="col-sm-9">
+                <!--user可以直接把所有数据一次提交-->
+                <input type="password"
+                       class="form-control"
+                       type="password"
+                       placeholder="请输入密码"
+                       ng-model="ctrl.user.password"
+                       required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-9 text-left">
+                <button type="submit"
+                        class="btn btn-default"
+                        ng-disabled="loginForm.$invalid">登录</button>
+            </div>
+        </div>
+    </form>
+    <div class="{{ctrl.returnClass}}">{{ctrl.messageFull}}</div>
+</div>

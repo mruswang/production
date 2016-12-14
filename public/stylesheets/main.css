@@ -1,0 +1,296 @@
+body{
+    background-color: rgba(0,0,0,0.1);
+}
+.nav>li>a{
+    height: 60px;
+    line-height: 20px;
+    font-size: 20px;
+    padding: 20px;
+    margin: 0 1px;
+
+}
+
+.form-control {
+    margin-top: 5px;
+}
+.btn-default{
+    margin-top: 5px;
+}
+.carousel.slide{
+    margin-top: 70px;
+}
+.particularly-recommended{
+    margin-top: 20px;
+    height: 500px;
+}
+
+.particularly-recommended-left>h4{
+    background-color: #F7F7F7;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 0;
+
+}
+.particularly-recommended-left>div{
+
+    padding: 0;
+}
+.particularly-recommended-left .media{
+    background-color: white;
+    padding-left: 0;
+    margin-top: 0;
+    border-top: 1px solid #F1F1F1;
+    border-right: 1px solid #F1F1F1;
+}
+.particularly-recommended-left .media .media-left{
+    padding: 20px;
+}
+.particularly-recommended-left .media-body h4{
+    height: 25px;
+    line-height: 25px;
+    font-size: 20px;
+    overflow: hidden;
+}
+.particularly-recommended-left .media:hover{
+    background-color: #FAFFF8;
+}
+.particularly-recommended-left .media:hover .media-body h4{
+    color: #53AE30;
+}
+.particularly-recommended-left .media-body p{
+    height: 80px;
+    line-height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    color: #999999;
+}
+.particularly-recommended-left .media-body a{color: #555555;text-decoration: none;}
+.newpublish>h4{
+    background-color: #F7F7F7;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 20px;
+
+}
+
+.hot-label h4{
+    background-color: #F7F7F7;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 0;
+    padding-left: 10px;
+    }
+.hot-label>ul{
+    background-color: white;
+    padding: 5px;
+    margin: 0;
+}
+.hot-label>ul>li{
+    margin: 5px;
+}
+.hot-label>ul>li>a{
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #666666;
+}
+.hot-label>ul>li>a:hover{
+    color: #00C6CC;
+    border-color: #00C6CC;
+}
+.recommend-article h4{
+    background-color: #F7F7F7;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 0;
+    padding-left: 10px;
+}
+.recommend-article .media{
+    background-color: white;
+    margin: 0;
+    border-bottom: 1px solid #F1F1F1;
+    padding: 10px;
+}
+.recommend-article .media:hover{
+    background-color: #FAFFF8;
+}
+.recommend-article .media .media-body a{
+    display: inline-block;
+    text-decoration: none;
+    color: #55555A;
+    line-height: 25px;
+    height: 25px;
+    overflow: hidden;
+}
+.recommend-article .media .media-body p{
+    color: #999999;
+    line-height: 25px;
+    height: 50px;
+    overflow: hidden;
+}
+.recommend-article .media:hover .media-body a{
+    color: #53AE30;
+}
+footer{
+    margin-top: 100px;
+}
+.back{
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    display:none;
+    cursor: pointer;
+}
+.back span{
+    font-size: 40px;
+
+}
+
+.img-icon.carousel-indicators {
+    background-color: black;
+}
+.carousel-indicators.img-icon{
+    position: static;
+    margin-left: 0;
+    width: 100%;
+}
+.img-icon.carousel-indicators span{
+    display: inline-block;
+    margin: 20px 30px;
+    height: 80px;
+    cursor: pointer;
+}
+.img-icon.carousel-indicators .active{
+    display: inline-block;
+    border:1px solid green;
+    width: 15%;
+    height: 100%;
+
+}
+h1{
+    margin: 50px 0;
+}
+.new-product{
+    margin-top: 50px;
+}
+.new-product figure{
+    width: 90%;
+    background-color: #26B864;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+.new-product figure p{
+    padding-top: 15px;
+    color: white;
+    text-align: center;
+}
+.new-product-center div{
+    margin-top: 20px;
+}
+.new-product-center div p{
+    text-align: center;
+    font-weight: 600;
+    color: #616161;
+}
+.product-show{
+    margin-top: 50px;
+
+    /*border-top: 1px solid #E1E6E9;*/
+}
+.product-show-each figure{
+    position: relative;
+}
+
+.product-show-each figure span{
+    position: absolute;
+    top:10px;
+    right:20px;
+    background-color: white;
+
+}
+.product-show-each figure>img{
+    width: 100%;
+    height: 100%;
+}
+.product-show-each>p{
+    text-align: center;
+}
+.product-show-each p del{
+    color: gray;
+}
+.product-show-hidden{
+    background-color:rgba(255,255,255,0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    display: none;
+}
+.product-show-each figure:hover .product-show-hidden{
+    display: block;
+}
+.product-show-hidden a{
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    margin-top: 45%;
+    font-size: 20px;
+    height: 50%;
+    color: green;
+    background: url(../images/active-state.png) no-repeat;
+    background-position: center 25px;
+}
+.terms-service{
+    margin-top: 50px;
+}
+
+.user{
+    margin-top: 100px;
+}
+
+.user>nav{
+    padding-right: 0;
+}
+.web{
+    margin-bottom: 30px;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+}
+.web a{
+    color: #0a0a0a;
+    display: inline-block;
+    padding-left: 10px;
+}
+.web a:hover{
+    text-decoration: none;
+    color: #77AE30;
+}
+.user,.react,.phone{
+    margin-top: 80px;
+}
+.phone>p{
+    text-indent: 30px;
+}
+.phone>h3{
+    color: red;
+}
+.phone>.p{
+    color: mediumseagreen;
+}
+.reactweb>h2{
+    color: green;
+}
+.reactweb>p{
+    text-indent: 30px;
+}
+.reactweb>p>h4{
+    color: red;
+}

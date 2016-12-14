@@ -1,0 +1,151 @@
+<div class="" ng-controller="userlistController as ctrl">
+    <h1>User List Page</h1>
+    <p>{{ctrl.message}}</p>
+    <table ng-table="ctrl.tableParams" class="table table-condensed table-bordered table-striped" show-filter="true">
+        <tr ng-repeat="user in $data">
+            <td><input type="checkbox"
+                       ng-bind="user_id"></td>
+            <td title="'Name'" filter="{name:'text'}" sortable="'id'">{{user.name}}</td>
+            <td title="'Email'" filter="{email:'text'}" sortable="'id'">{{user.email}}</td>
+            <td title="'Age'" filter="{age:'text'}" sortable="'id'">{{user.age}}</td>
+            <td>
+                <button class="btn btn-default btn-sm"
+                        data-toggle="modal"
+                        data-target="#editModal"
+                        ng-click="ctrl.edit(user._id)">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+                <button class="btn btn-danger btn-sm"
+                        data-toggle="modal"
+                        data-target="#delModal"
+                        ng-click="ctrl.edit(user._id)">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </td>
+        </tr>
+    </table>
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">编辑用户消息</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal"
+                          name="userlistForm"
+                          ng-submit="ctrl.update(ctrl.uid)">
+                        <!--<input type="hidden" ng-model="ctrl.uid">-->
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Name"
+                                       required
+                                       ng-model="ctrl.user.username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email"
+                                       class="form-control"
+                                       placeholder="Email"
+                                       required
+                                       ng-model="ctrl.user.email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">Age</label>
+                            <div class="col-sm-10">
+                                <input type="number"
+                                       class="form-control"
+                                       placeholder="Age"
+                                       required
+                                       ng-model="ctrl.user.age">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">Gender</label>
+                            <div class="col-sm-10 text-left" ng-init="ctrl.user.gender">
+                                男<input type="radio"
+                                        name="gender"
+                                        ng-model="ctrl.user.gender"
+                                        required
+                                        value="男">
+                                女<input type="radio"
+                                        name="gender"
+                                        required
+                                        ng-model="ctrl.user.gender"
+                                        value="女">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">Address</label>
+                            <div class="col-sm-10">
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="address"
+                                       required
+                                       ng-model="ctrl.user.address">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">Phone</label>
+                            <div class="col-sm-10">
+                                <input type="number"
+                                       class="form-control"
+                                       placeholder="phone"
+                                       required
+                                       ng-model="ctrl.user.phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">nickname</label>
+                            <div class="col-sm-10">
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="nickname"
+                                       required
+                                       ng-model="ctrl.user.nickname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label">loginname</label>
+                            <div class="col-sm-10">
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="loginname"
+                                       required
+                                       ng-model="ctrl.user.loginname">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="submit" class="btn btn-primary" ng-disabled="userlistForm.$invalid">保存</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    你确定要删除信息
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary"  ng-click="ctrl.del(ctrl.uid)">确定删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

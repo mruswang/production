@@ -1,0 +1,45 @@
+<div class="" ng-controller="detailController as ctrl">
+    <h1>User detail page</h1>
+    <p>{{ctrl.message}}</p>
+    <button ng-click="ctrl.currentTab='tab1'">肖像</button>
+    <button ng-click="ctrl.currentTab='tab2'">经历</button>
+    <button ng-click="ctrl.currentTab='tab3'">简历</button>
+    <button ng-click="ctrl.currentTab='default'">主页</button>
+    <div ng-switch="ctrl.currentTab">
+        <div ng-switch-when="tab1">
+            肖像页面
+            <div ng-init="myVar='images/product1.jpg'">
+                <img ng-src="{{myVar}}" width="200">
+            </div>
+        </div>
+        <div ng-switch-when="tab2">
+            经历页面
+            <p ng-pluralize
+               count="ctrl.personCount"
+               when="{'0':'Nobody is viewing',
+                        'one':'1 person is viewing',
+                        'other':'{} people are viewing'}"></p>
+        </div>
+        <div ng-switch-when="tab3">
+            简历页面
+            <h2>Event Directives</h2>
+            <input type="text"
+                   ng-blur="ctrl.focusState='Blurred'"
+                   ng-focus="ctrl.focusState='Focused'"
+                   ng-mouseenter="ctrl.mouseState='Entered'"
+                   ng-mouseleave="ctrl.mouseState='Left'"
+                   ng-mouseclick="ctrl.mouseState='Clicked'"
+                   ng-mousedown="ctrl.mouseState='Down'"
+                   ng-mouseup="ctrl.mouseState='Up'"
+                   ng-keyup="ctrl.keyStroke($event)"
+                   ng-click="ctrl.mouseClick($event)">
+            <hr>Focus State:{{ctrl.focusState}}
+            <br>Mouse State:{{ctrl.mouseState}}
+            <br>Key Info:{{ctrl.keyInfo | json}}
+            <br>Mouse Info:{{ctrl.mouseInfo | json}}<br>
+        </div>
+        <div ng-switch-default>
+            主页页面
+        </div>
+    </div>
+</div>

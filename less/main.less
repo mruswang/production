@@ -1,0 +1,55 @@
+
+.page{
+  bottom: 0;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  position: relative;
+  text-align: center;
+  top:0;
+  width: 100%;
+}
+.page h1{font-size: 60px;}
+.page a{margin-top: 50px;}
+.page-detail{background: #F8F8F8;}
+.page-edit{background: #F8F8F8;}
+.page-forgotpwd{background: #F8F8F8;}
+.page-signup{background: #F8F8F8;}
+.page-userlist{background:#F8F8F8;}
+.page-login{background:#F8F8F8;}
+@keyframes rotateFall {
+  0% {transform: rotateZ(0deg);}
+  20% {transform: rotateZ(10deg);animation-timing-function: ease-out;}
+  40% {transform: rotateZ(17deg);}
+  60% {transform: rotateZ(16deg);}
+  100% {transform: translateY(100%) rotateZ(17deg);}
+}
+/*slide in from the bottom*/
+@keyframes slideOutLeft {
+  to {transform: translateX(-100%);}
+}
+/*rotate Out Newspaper*/
+@keyframes rotateOutNewspaper {
+  to {transform: translateZ(-300px) rotateZ(360deg);opacity: 0;}
+}
+/*scale up*/
+@keyframes scaleUp {
+  from {opacity: 0.3; -webkit-transform: scale(0.8);}
+}
+/*slide in from the bottom*/
+@keyframes slideInRight {
+  from {transform: translateX(100%);}
+  to {transform: translateX(0);}
+}
+.ng-enter{animation: scaleUp 0.5s both ease-in;z-index: 8888;}
+.ng-leave{animation: slideOutLeft 0.5s both ease-in;z-index: 9999;}
+.ng-enter{z-index: 8888;}
+.ng-leave{z-index: 9999;}
+/*home*/
+.page-userlist.ng-enter{animation: scaleUp 0.5s both ease-in;}
+.page-userlist.ng-leave{transform-origin: 0% 0%;animation: rotateFall 1s both ease-in;}
+/*about*/
+.page-signup.ng-enter{animation: slideInRight 0.5s both ease-in;}
+.page-signup.ng-leave{animation: slideOutLeft  0.5s both ease-in;}
+/*contact*/
+.page-login.ng-leave{transform-origin: 50% 50%;animation: rotateOutNewspaper 0.5s both ease-in;}
+.page-login.ng-enter{animation: slideInRight 0.5s both ease-in;}

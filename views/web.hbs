@@ -1,0 +1,234 @@
+{{>discount}}
+<!--html-->
+<div class="web">
+    <a href="http://www.w3school.com.cn/html/index.asp" target="_blank"><h3>HTML</h3></a>
+    <ul >
+        <li>HTML 是用来描述网页的一种语言。</li>
+        <li>HTML 指的是超文本标记语言 (Hyper Text Markup Language)</li>
+        <li>HTML 不是一种编程语言，而是一种标记语言 (markup language)</li>
+        <li>标记语言是一套标记标签 (markup tag)</li>
+        <li>HTML 使用标记标签来描述网页</li>
+    </ul>
+    <pre >
+&lt;html&gt;
+   &lt;body&gt;
+
+      &lt;h1&gt;My First Heading&lt;/h1&gt;
+      &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+   &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<!--css-->
+<div class="web">
+    <a href="http://www.w3school.com.cn/css/index.asp"><h3>CSS</h3></a>
+    <ul>
+        <li> CSS 指层叠样式表 (Cascading Style Sheets)</li>
+        <li>样式定义如何显示 HTML 元素</li>
+        <li>样式通常存储在样式表中</li>
+        <li>把样式添加到 HTML 4.0 中，是为了解决内容与表现分离的问题</li>
+        <li>外部样式表可以极大提高工作效率</li>
+        <li>外部样式表通常存储在 CSS 文件中</li>
+        <li>多个样式定义可层叠为一</li>
+    </ul>
+    <pre>body {
+  color: #000;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, Palatino, serif;
+  }</pre>
+</div>
+<!--JavaScripts-->
+<div class="web">
+    <a href="http://www.w3school.com.cn/js/index.asp"><h3>JavaScript</h3></a>
+    <ul>
+        <li>JavaScript 是属于网络的脚本语言！</li>
+        <li>JavaScript 被数百万计的网页用来改进设计、验证表单、检测浏览器、创建cookies，以及更多的应用。</li>
+        <li>JavaScript 是一种轻量级的编程语言。</li>
+        <li>JavaScript 是可插入 HTML 页面的编程代码。</li>
+        <li>JavaScript 插入 HTML 页面后，可由所有的现代浏览器执行</li>
+    </ul>
+    <pre>document.write("&lt;h1&gt;This is a heading&lt;/h1&gt;");
+document.write("&lt;p&gt;This is a paragraph&lt;/p&gt;");
+</pre>
+</div>
+<!--jQuery-->
+<div class="web">
+    <a href="http://jquery.com/"><h3>jQuery</h3></a>
+    <ul>
+        <li>jQuery是一个JavaScript函数库</li>
+        <li>jQuery是一个轻量级的“写得少，做得多”的JavaScript库</li>
+        <li>jQuery库包含以下功能：
+            <ul>
+                <li>HTML 元素选取</li>
+                <li>HTML 元素操作</li>
+                <li>CSS 操作</li>
+                <li>HTML 事件函数</li>
+                <li>JavaScript 特效和动画</li>
+                <li>HTML DOM 遍历和修改</li>
+                <li>AJAX</li>
+                <li>Utilities</li>
+            </ul>
+        </li>
+    </ul>
+    <pre>&lt;html&gt;
+&lt;head&gt;
+&lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(document).ready(function(){
+  $("p").click(function(){
+  $(this).hide();
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p&gt;If you click on me, I will disappear.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+</div>
+<!--Bootstrap-->
+<div class="web">
+    <a href="http://v3.bootcss.com/"><h3>Bootstrap</h3></a>
+    <ul>
+        <li>Bootstrap是一个前端框架，用于快速开发web应用程序和网站</li>
+        <li>Mark Otto和Jacob Thornton共同开发的一个开源框架</li>
+        <li>Bootstrap是2011.8月发布的，是一个CSS/HTML框架，是基于HTML5和CSS3开发的，并兼容大部分jQuery插件</li>
+        <li>Bootstrap本身支持响应式web设计，而且拥有一个非常稳健的12列的栅格布局系统</li>
+    </ul>
+    <pre><code class="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh-cn"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Bootstrap 101 Template<span class="nt">&lt;/title&gt;</span>
+
+    <span class="c">&lt;!-- Bootstrap --&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"css/bootstrap.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;</span>
+    <span class="c">&lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;</span>
+    <span class="c">&lt;!--[if lt IE 9]&gt;</span>
+<span class="c">      &lt;script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"&gt;&lt;/script&gt;</span>
+<span class="c">      &lt;script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;</span>
+<span class="c">    &lt;![endif]--&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>你好，世界！<span class="nt">&lt;/h1&gt;</span>
+
+    <span class="c">&lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="c">&lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+<!--Angular JS-->
+<div class="web">
+    <a href="https://docs.angularjs.org/"><h3>Angular JS</h3></a>
+    <ul>
+        <li>完全使用JavaScript编写的客服端技术。同时他历史悠久的Web技术（HTML CSS JavaScript）配合使用，使Web应用开发比以往更简单，更快捷。</li>
+        <li>这款框架最核心特征有
+            <ul>
+                <li>单页应用</li>
+                <li>MVC</li>
+                <li>依赖注入</li>
+                <li>模块化</li>
+                <li>声明式</li>
+                <li>自动化双向数据绑定</li>
+                <li>语义化标签</li>
+                <li>可扩展性</li>
+            </ul>
+        </li>
+        <li>Angular JS主要用于构建单页面Web应用（也可以认为是Ajax应用）</li>
+    </ul>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;div ng-app=""&gt;
+      &lt;p&gt;名字 : &lt;input type="text" ng-model="name"&gt;&lt;/p&gt;
+      &lt;h1 ng-bind="name"&gt;Hello&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<!--Node js-->
+<div class="web">
+    <a href="https://nodejs.org/en/"><h3>Node js</h3></a>
+    <ul>
+        <li>Web服务API，比如REST
+            <ul>
+                <li>SOAP缩略词 表示“简单对象访问协议”（Simple Object Access Protocol）</li>
+                <li>WSDL缩略词 表示“Web服务描述语言”（Web Service Description Language）</li>
+                <li>REST缩略词 表示“表述性状态传递”（Representational State Transfer）</li>
+            </ul>
+        </li>
+        <li>实时对人游戏</li>
+        <li>后端的Web服务，列如跨域、服务器端的请求</li>
+        <li>多客服端的通信，如即使通信</li>
+    </ul>
+<pre class="prettyprint prettyprinted">
+    <p>打开终端，键入node进入命令交互模式，可以输入一条代码语句后立即执行并显示结果，例如：</p><span class="pln">$ node
+</span><span class="pun">&gt;</span><span class="pln"> console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">'Hello World!'</span><span class="pun">);</span><span class="pln">
+</span><span class="typ">Hello</span><span class="pln"> </span><span class="typ">World</span><span class="pun">!</span></pre></div>
+
+<!--Ajax-->
+<div class="web">
+    <a href="http://www.w3school.com.cn/ajax/"><h3>Ajax</h3></a>
+    <ul>
+        <li>表单驱动的交互</li>
+        <li>快速地用户与用户间的交互</li>
+        <li>普通的文本输入提示和自动完成的场景</li>
+        <li>AJAX即"Asynchronous[e'sɪŋkrənəs] Javascript And XML"（异步的JavaScript和XML）</li>
+        <li>是一种使用现有标准的新方法；是技术的组合</li>
+        <li> 是与服务器进行少量数据交换，并局部更新网页的技术</li>
+        <li>XML指可扩展标记语言（EXtensible[ɪk'stɛnsəbl] Markup Language）。</li>
+    </ul>
+    <pre>&lt;html&gt;
+&lt;body&gt;
+
+&lt;div id="myDiv"&gt;&lt;h3&gt;Let AJAX change this text&lt;/h3&gt;&lt;/div&gt;
+&lt;button type="button" <span class="marked">onclick="loadXMLDoc()"</span>&gt;Change Content&lt;/button&gt;
+&lt;script type="text/javascript"&gt;
+     function loadXMLDoc()
+         {
+            document.write("这里是Ajax输出的内容");
+         }
+        &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+<!--MongoDB-->
+<div class="web">
+    <a href="https://www.mongodb.com/"><h3>MongoDB</h3></a>
+    <ul><li>MongoDB的提供了一个面向文档存储，操作起来比较简单和容易。</li>
+        <li>你可以在MongoDB记录中设置任何属性的索引 (如：FirstName="Sameer",Address="8 Gandhi Road")来实现更快的排序。</li>
+        <li>你可以通过本地或者网络创建数据镜像，这使得MongoDB有更强的扩展性。</li>
+        <li>如果负载的增加（需要更多的存储空间和更强的处理能力） ，它可以分布在计算机网络中的其他节点上这就是所谓的分片。</li>
+        <li>Mongo支持丰富的查询表达式。查询指令使用JSON形式的标记，可轻易查询文档中内嵌的对象及数组。 </li>
+        <li>MongoDb 使用update()命令可以实现替换完成的文档（数据）或者一些指定的数据字段 。</li>
+        <li>Mongodb中的Map/reduce主要是用来对数据进行批量处理和聚合操作。</li>
+        <li>Map和Reduce。Map函数调用emit(key,value)遍历集合中所有的记录，将key与value传给Reduce函数进行处理。</li>
+        <li>Map函数和Reduce函数是使用Javascript编写的，并可以通过db.runCommand或mapreduce命令来执行MapReduce操作。</li>
+        <li>GridFS是MongoDB中的一个内置功能，可以用于存放大量小文件。</li>
+        <li>MongoDB允许在服务端执行脚本，可以用Javascript编写某个函数，直接在服务端执行，也可以把函数的定义存储在服务端，下次直接调用即可。</li>
+        <li>MongoDB支持各种编程语言:RUBY，PYTHON，JAVA，C++，PHP，C#等多种语言。</li>
+        <li>MongoDB安装简单。</li></ul>
+    <pre> <img src="images/mongodb.jpg" alt=""></pre>
+
+</div>

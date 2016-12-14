@@ -1,0 +1,94 @@
+<div class="phone">
+<h2>HTML5移动端手机网站开发流程</h2>
+<p>最近一直在研究移动手机网站的开发，发现做手机网站没有想象中的那么难。为什么会这么说呢？我们试想下:我们连传统的PC网站都会做，
+    难道连一个小小的手机网站难道都搞不定吗？其实手机网站就是一个微缩版的PC网站罢了！至于为什么觉得难、觉得无从下手。</p>
+<h3>一、没有完整的思路和流程</h3>
+<p>就像做网站的流程一样，如果你能知道它的流程，我相信就不会觉得做手机网站难！真正难的是你没有思路。</p>
+<h3>二、把html5这门技术想的高深莫测</h3>
+<p>好像觉得学会用html5+css3做手机网站，就相当于学会了顶尖的绝世武功。其实你错了！不要把html5这玩意想的太高深，其实做手机网站，
+    真正意义上用不到什么的html5的强大功能。(可能对于一些不懂什么技术的小白而言：你的手机网站是用HTML5+CSS3做的啊，简直牛逼呀！
+    能用上目前互联网上最新最前沿的技术。其实明眼人一看，就知道是用什么技术做的。俗话说的好："外行看热闹，内行看门道")</p>
+<p>好了扯了这么多，下面就说说怎么来开发移动手机网站吧
+<p>基本上开发手机网站，可大致分为两大类。一类是用框架开发手机网站。一类是自己手写手机网站</p>
+<h3>一、框架开发手机网站</h3>
+<p>一般用现在常用的开发框架有：目前Web前端最火的框架（BootStrap）、Jquery mobile..当然可能还有一些移动端开发的框架，这些我就没具体去研究过。</p>
+<p>为什么说BootStrap是目前前端最火热的开发框架呢？</p>
+<p>因为bootstrap自带响应式布局（栅格系统），而且能做到移动设备优先的原则。</p>
+<p>运用bootstrap来开发网站有什么好处呢？</p>
+<p class="p">1.不懂设计也可以做网站</p>
+<p>就算不懂设计，你的网页在Bootstrap的帮助下，也能拥有超高颜值。它强大的内置样式库让你的作品变成尤物。</p>
+<p>主要体现在：字体文件和bootstrap自带的UI样式。（为广大不会UI设计的程序员，提供了福音）</p>
+<p class="p">2.上手快</p>
+<p>你可以专心解决问题，冗繁的细节都丢给Bootstrap操心。可以做到一次开发，就可适配所有终端，并且能迅速上手并建出网站原型。
+    还提供很多丰富的插件，就算你不会JS，基本能看懂常见的API，网站上的效果，基本能解决。</p>
+<p>缺点：</p>
+<p class="p">1.不遵循最佳实践</p>
+<p>我们在使用Bootstrap时遇到的最大问题之一是你的DOM元素上将拥挤大量的类。这打破了良好的web设计基本规则之一，HTML不再有语义，而且内容和表示不再分离。
+    前端纯粹主义者会觉得这相当令人讨厌，以为它使可扩展性、重用性和维护性遇到了更大的挑战。</p>
+<p class="p">2. Bootstrap 太重</p>
+<p>直接点说：就是CSS和JS有点点大。CSS压缩后115k,JS压缩后35k</p>
+<p>如果你想要使用Bootstrap的所有功能，你应该好好考虑资源的加载时间。当然，对于一些地方这可能不是问题，但是在新西兰互联网不得不横跨太平洋，
+    这时数据达到那儿将是很缓慢的。因此考虑你的目标市场。</p>
+<p>相信任何框架都有它的优点，同时也是有它的缺点的。没有一个产品是很完美的，所以根据自身实际情况进行选择。
+    至于一些其它框架暂时不做过多的解释了，相信只要你肯愿意百度一下，就可以找到你想要的答案。</p>
+<p><img src="images/phone1.jpg" class="img-responsive" alt=""></p>
+<h3>二、手写手机网站</h3>
+<p>一般我们自己手动开发手机网站的话，基本可以划分两类来做到。一类是通过在网页头部添加meta标签进行实现（网页指html5的格式来开发）。
+    另一类是通过CSS3的Media标签（媒介查询）来实现。不了解媒介查询的朋友，可以看看这篇文章：响应式布局。</p>
+<p>在这里我们详细讲解下,利用添加meta标签来做手机网站。</p>
+<p>基本在网页头部我们只需添加四个meta标签就可以实现一个手机网站的框架。我一起来看看是哪些meta标签。</p>
+<p class="p">1、添加viewport标签</p>
+<pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"&gt;</pre>
+<p>详细属性：</p>
+<pre>width  ----  viewport的宽度（width=device-width意思是：宽度等于设备宽度）
+height ------  viewport的高度（height=device-height意思是：高度等于设备宽度）
+initial-scale ----- 初始的缩放比例
+minimum-scale ----- 允许用户缩放到的最小比例
+maximum-scale ----- 允许用户缩放到的最大比例
+user-scalable ----- 用户是否可以手动缩放</pre>
+<p class="p">2、禁止将数字变为电话号码</p>
+<pre>&lt;meta name="format-detection" content="telephone=no"&gt;</pre>
+<p>一般情况下，IOS和Android系统都会默认某长度内的数字为电话号码，即使不加也是会默认显示为电话的，so，取消这个很有必要！</p>
+<p class="p">3、iphone设备中的safari私有meta标签</p>
+<pre>&lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;</pre>
+<p>它表示：允许全屏模式浏览，隐藏浏览器导航栏</p>
+<p class="p">4、iphone的私有标签</p>
+<pre>&lt;meta name="apple-mobile-web-app-status-bar-style" content="black"&gt;</pre>
+<p>它指定的iphone中safari顶端的状态条的样式</p>
+<p>默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）</p>
+<p class="p">另外还有一个个性化的link标签，它支持用户将网页创建快捷方式到桌面时，其图标变为我们自己定义的图标。比如手机腾讯网上的标签：</p>
+<pre>&lt;link rel="apple-touch-icon-precomposed" href="http://3gimg.qq.com/wap30/info/info5/img/logo_icon.png"&gt;</pre>
+<p>不过腾讯对这个png图标的命名并不规范，常规我们要求文件名应为 apple-touch-icon.png 或 apple-touch-icon-precomposed.png ，
+    前者的命名iOS会为这个图标自动添加圆角、阴影和高亮覆盖层，后者则不会添加这些效果。</p>
+<p class="p">手机网站基本框架代码：</p>
+<pre>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;手机网站&lt;/title&gt;
+    &lt;meta name="keywords" content=""&gt;
+    &lt;meta name="description" content=""&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"&gt;
+    &lt;meta name="format-detection" content="telephone=no"&gt;
+    &lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
+    &lt;meta name="apple-mobile-web-app-status-bar-style" content="black"&gt;
+    &lt;meta name="author" content="duanliang, duanliang920.com"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        大家好！这是第一个手机网页哦！
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p class="p">其实在移动端的开发让我纠结的是在字体单位上的选择。</p>
+<p>随着CSS3的兴起，有一种叫rem的单位渐渐的出现在我们的视野中。它是一个相对单位，能实现响应式的那种。它是相对于html根元素来设置当前文字大小，或者宽高的。因为它是一个不固定值,不像PX。
+    听说在PX这个单位在PC和移动的解析不同，所以才使用rem的。这点我也不是很清楚，也请教了一些做手机网站的高手，了解了一些信息。</p>
+<p>原来大部分的人依旧是使用PX来布局，rem都用的少。目前来说，就移动端的淘宝首页就是采用rem来作为单位来布局的。
+    关于使用rem单位这个问题以及它的好处：还得需要大神来解答这个问题，毕竟我也只是刚接触。</p>
+<h3>关于手机网站的调试问题</h3>
+<p>一般我们采用的：在浏览器调试+真机测试，因为浏览器毕竟只是一个模拟工具，实际开发的话，我们还得用真机去测试。</p>
+<p>比如：（Android类手机，iPhone5、5s、6、6Plus...）</p>
+<p>而在浏览器上测试，可以chrome（谷歌浏览器）的F12调试工具：有个手机样的小图标，点击就能模拟手机测试。</p>
+<p>或者用火狐的测试工具：按shift+ctrl+M进行查看。</p>
+</div>
